@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_quran"
+            android:icon="@drawable/book_open"
+            android:title="Quran" />
+        <item
+            android:id="@+id/nav_hadith"
+            android:icon="@drawable/open_book"
+            android:title="Hadith" />
+        <item
+            android:id="@+id/nav_prayer_timing"
+            android:icon="@drawable/mosque_clock"
+            android:title="Prayer Timings" />
+        <item
+            android:id="@+id/nav_qibla"
+            android:icon="@drawable/compass"
+            android:title="Qibla" />
+        <item
+            android:id="@+id/nav_articles"
+            android:icon="@drawable/articles_icon"
+            android:title="Scholarly Articles" />
+        <item
+            android:id="@+id/nav_Announcement"
+            android:icon="@drawable/announcement"
+            android:title="Announcement" />
+        <item
+            android:id="@+id/nav_Mark_Masjid"
+            android:icon="@drawable/ic_location_on_black_24dp"
+            android:title="Mark your Mosque"/>
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="Send" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

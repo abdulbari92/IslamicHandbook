@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="faizan.com.islamichandbook">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".utilities.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB_0wFXU2IH5KZnQsYRJMIyn50JFtllquU" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="95a572e62dc5ca6f9f106dd102ebd6ddfc2d0d0e"
+            />
+
+        <activity
+            android:name=".MainActitivity.MainActivity"
+            android:label="@string/arabic_app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".splashscreen.SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".utilities.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".utilities.AlarmSettingService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".utilities.PrayerAlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".utilities.AlarmPlayingService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".GeoFence.GeoFenceActivity"
+            android:parentActivityName=".MainActitivity.MainActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/arabic_app_name"></activity>
+
+        <service
+            android:name=".GeoFence.GeofenceTransitionService"
+            android:exported="false" />
+
+        <activity android:name=".PdfViewer.PdfViewerActivity"
+            android:parentActivityName=".MainActitivity.MainActivity">
+        </activity>
+    </application>
+</manifest>

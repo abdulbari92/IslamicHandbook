@@ -1,0 +1,24 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundGravity="center"
+    android:textAlignment="center"
+    android:theme="@style/AppTheme.NoActionBar"
+    tools:context="faizan.com.islamichandbook.MainActitivity.MainFragment">
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill"
+        android:background="@color/cardview_shadow_end_color"
+        android:contextClickable="false"
+        android:textAlignment="center"
+        android:theme="@style/NavigationViewPadding"
+        app:headerLayout="@layout/nav_header_main"
+        app:itemBackground="@drawable/item_background"
+        app:itemTextColor="#000000"
+        app:menu="@menu/activity_main_drawer" />
+</FrameLayout>
